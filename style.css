@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #C9B59C;
+    background-color: #F9F8F6;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:
+        radial-gradient(ellipse at top left, rgba(201, 181, 156, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at bottom right, rgba(201, 181, 156, 0.08) 0%, transparent 60%);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 80px;
+    background-color: #EFE9E3;
+    gap: 36px;
+    position: relative;
+    border-top: 1px solid rgba(201, 181, 156, 0.4);
+    border-bottom: 1px solid rgba(201, 181, 156, 0.4);
+    box-shadow: 0 8px 48px rgba(180, 155, 130, 0.13), 0 1px 3px rgba(180, 155, 130, 0.08);
+}
+
+.card::before,
+.card::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 1px;
+    background: #C9B59C;
+    opacity: 0.5;
+}
+
+.card::before {
+    top: -6px;
+}
+
+.card::after {
+    bottom: -6px;
+}
+
+.label {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #C9B59C;
+    opacity: 0.7;
+}
+
+#number {
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    font-size: 110px;
+    line-height: 1;
+    color: #8B6E5A;
+    letter-spacing: -3px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.divider span {
+    display: block;
+    height: 1px;
+    width: 40px;
+    background: linear-gradient(90deg, transparent, rgba(201, 181, 156, 0.5));
+}
+
+.divider span:last-child {
+    background: linear-gradient(90deg, rgba(201, 181, 156, 0.5), transparent);
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(201, 181, 156, 0.5);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.btn {
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(201, 181, 156, 0.45);
+    background: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C9B59C;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    background: rgba(201, 181, 156, 0.15);
+    border-color: #C9B59C;
+    color: #8B6E5A;
+    box-shadow: 0 4px 16px rgba(201, 181, 156, 0.2);
+}
+
+.btn:active {
+    transform: scale(0.91);
+}
+
+.btn svg {
+    width: 18px;
+    height: 18px;
+}
